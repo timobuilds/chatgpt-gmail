@@ -1,0 +1,30 @@
+
+{
+    "name":"ChatGPT + GMail",
+    "version": "1.0.0",
+    "description": "This is an extension that connects Gmail with GPT",
+    "manifest_version": 3, 
+    "author": "Timotheus Gmeiner",
+    "action": {
+        "default_popup": "index.html"
+    },
+   "content_scripts": [
+        {
+            "matches": ["https://mail.google.com/*}"],
+            "js": ["gmail-script.js"]
+        }
+   ], 
+    
+    "background": {
+        "service__worker": "background.js"
+    },
+
+    "host_permissions":[
+        "https://mail.google.com/*" 
+    ]
+
+}
+
+
+
+
